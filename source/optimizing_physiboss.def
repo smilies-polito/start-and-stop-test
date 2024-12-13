@@ -1,0 +1,50 @@
+Bootstrap: library
+From: ubuntu:22.04
+
+%files
+
+%post
+
+    ln -fs /usr/share/zoneinfo/Europe/Rome /etc/localtime
+    export DEBIAN_FRONTEND=noninteractive
+    echo "export DEBIAN_FRONTEND=noninteractive" >> $SINGULARITY_ENVIRONMENT
+
+    apt update -y
+    apt upgrade -y
+
+    apt install python3.10 -y
+    apt install python3-pip -y
+    apt install python-is-python3 -y
+    apt install python3-venv -y
+    apt install vim -y
+    apt install git -y
+
+    pip --no-cache-dir install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    pip --no-cache-dir install numpy
+    pip --no-cache-dir install matplotlib
+    pip --no-cache-dir install pandas
+    pip --no-cache-dir install PyYAML
+    pip --no-cache-dir install scipy
+    pip --no-cache-dir install tqdm
+    pip --no-cache-dir install pctk
+
+    apt install flex -y
+    apt install bison -y
+
+%runscript
+    #!/bin/bash
+    if [ -z "$1" ]; then
+        echo "Error: output folder missing"
+        echo "usage: singularity run container.sif /path/to/your/output/folder"
+        exit 1
+    fi
+    output_folder="$1"
+
+    cd ../test
+    
+    # run the utility_test
+    python utility_test.py "$output_folder" 
+
+    # run the quantitative test
+    python quantitative_test.py "$output_folder"
+

@@ -1,0 +1,66 @@
+{
+    "z_min": {
+        "value": -500,
+        "path": "domain/z_min"
+    },
+    "z_max": {
+        "value": 500,
+        "path": "domain/z_max"
+    },
+    "use_2D": {
+        "value": "false",
+        "path": "domain/use_2D"
+    },
+    "max_time": {
+        "value": 1440,
+        "path": "overall/max_time"
+    },
+    "save_time": {
+        "value": 30,
+        "path": "save/full_data/interval"
+    },
+    "if_start_inj": {
+        "value": "true",
+        "path": "user_parameters/if_start_inj"
+    },
+    "tnf_pulse_period": {
+        "value": 150,
+        "path": "user_parameters/tnf_pulse_period"
+    },
+    "tnf_pulse_duration": {
+        "value": 10,
+        "path": "user_parameters/tnf_pulse_duration"
+    },
+    "tnf_pulse_concentration": {
+        "value": 0.005,
+        "path": "user_parameters/tnf_pulse_concentration"
+    },
+    "tumor_radius": {
+        "value": 100,
+        "path": "user_parameters/tumor_radius"
+    },
+    "membrane_lenght": {
+        "value": 120,
+        "path": "user_parameters/membrane_length"
+    },
+    "read_init": {
+        "value": "false",
+        "path": "user_parameters/read_init"
+    },
+    "seed_tnf": {
+        "value": "true",
+        "path": "user_parameters/seed_tnf"
+    },
+    "start_stop": {
+        "value": "true",
+        "path": "user_parameters/start_stop"
+    },
+    "auto_stop": {
+        "value": "true",
+        "path": "user_parameters/auto_stop"
+    },
+    "auto_stop_resistance": {
+        "value": "true",
+        "path": "user_parameters/auto_stop_resistance"
+    }
+}

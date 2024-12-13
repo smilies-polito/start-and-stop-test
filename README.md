@@ -13,12 +13,12 @@ git clone https://github.com/smilies-polito/optimizing_physiboss.git #change the
 
 3) Move to the optimizing_physiboss source subfolder, and build the optimizing_physiboss Singularity container with 
 ```bash
-cd  optimizing_physiboss/source
+cd optimizing-physiboss/source
 sudo singularity build optimizing_physiboss.sif optimizing_physiboss.def
 ```
 or using fake root privileges
 ```bash
-cd  optimizing_physiboss/source
+cd optimizing-physiboss/source
 singularity build --fakeroot optimizing_physiboss.sif optimizing_physiboss.def
 ```
 
@@ -63,7 +63,7 @@ To reproduce the analysis from this paper, run the Singularity container optimiz
 Move to the `source` folder and run the `optimizing_physiboss.sif` file
 ```bash
 cd optimizing_physiboss/source
-singularity run optimizing_physiboss.sif /path/to/yout/output/folder/
+singularity run optimizing_physiboss.sif /path/to/your/output/folder/
 ```
 ## Disclaimer
 
